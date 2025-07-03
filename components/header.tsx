@@ -27,9 +27,6 @@ export default function Header() {
           <Link href="/" className="hover:text-blue-600">
             Trang chủ
           </Link>
-          <Link href="/products" className="hover:text-blue-600">
-            Sản phẩm
-          </Link>
           {state.user && (
             <Link href="/orders" className="hover:text-blue-600">
               Đơn hàng
@@ -51,7 +48,7 @@ export default function Header() {
 
           {state.user ? (
             <div className="flex items-center space-x-2">
-              <span className="text-sm">Xin chào, {state.user.name}</span>
+              <span className="text-sm hidden md:block">Xin chào, {state.user.name}</span>
               <Button variant="outline" size="icon" onClick={handleLogout}>
                 <LogOut className="h-4 w-4" />
               </Button>
